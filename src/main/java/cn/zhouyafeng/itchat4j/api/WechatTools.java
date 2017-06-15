@@ -57,7 +57,7 @@ public class WechatTools {
 	 * 
 	 * @author https://github.com/yaphone
 	 * @date 2017年5月4日 下午10:56:31
-	 * @param name
+	 * @param nickName
 	 * @return
 	 */
 	public static String getUserNameByNickName(String nickName) {
@@ -82,6 +82,15 @@ public class WechatTools {
 			contactList.add(o.getString("NickName"));
 		}
 		return contactList;
+	}
+
+	public static Map<String,String> getContactMap(){
+		Map<String,String> contactMap = new HashMap<String, String>();
+		for(JSONObject o : core.getContactList()){
+			contactMap.put(o.getString("UserName"),o.getString("NickName"));
+		}
+
+		return contactMap;
 	}
 
 	/**

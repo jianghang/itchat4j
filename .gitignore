@@ -3,7 +3,9 @@
 /.settings
 /.classpath
 /.idea
-/.DS_Store
+.DS_Store
+*/.DS_Store
 *.iml
 
 /bin/
+/wechatfile/
