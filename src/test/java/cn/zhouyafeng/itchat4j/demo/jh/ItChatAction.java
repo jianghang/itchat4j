@@ -28,8 +28,9 @@ public class ItChatAction {
 
         List<String> contactList = WechatTools.getContactList();
         logger.info("ContactList: " + JSON.toJSONString(contactList));
-        Map<String,String> contactMap = WechatTools.getContactMap();
-        logger.info("ContactMap: " + JSON.toJSONString(contactMap));
+        MsgHandlerHJ.contactMap = WechatTools.getContactMap();
+        logger.info("ContactMap: " + JSON.toJSONString(MsgHandlerHJ.contactMap));
+        WechatTools.setUserInfo();
     }
 
 }

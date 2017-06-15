@@ -89,6 +89,7 @@ public class WechatTools {
 		for(JSONObject o : core.getContactList()){
 			contactMap.put(o.getString("UserName"),o.getString("NickName"));
 		}
+		contactMap.put(core.getUserName(),core.getNickName());
 
 		return contactMap;
 	}
@@ -163,7 +164,7 @@ public class WechatTools {
 	/**
 	 * 
 	 * @date 2017年5月27日 上午12:21:40
-	 * @param userName
+	 * @param nickName
 	 * @param remName
 	 */
 	public static void remarkNameByNickName(String nickName, String remName) {
